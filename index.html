@@ -22,28 +22,26 @@
         </div>
         <div class="row">
             <div class="col-12"><div class="input-group mb-3">
-                    <label class="input-group-text"><span class="me-1">🔗</span> Payloads link</label>
-                    <input type="text"  id="urla" class="form-control" placeholder="Enter your payloads link" value="https://raw.githubusercontent.com/h6nt3r/collection_payloads/refs/heads/main/git-dorks.txt">
+                    <label class="input-group-text" for="urla"><span class="me-1">🔗</span> Payloads link</label>
+                    <input type="text" id="urla" class="form-control" placeholder="Enter your payloads link" value="https://raw.githubusercontent.com/h6nt3r/collection_payloads/refs/heads/main/git-dorks.txt">
                     <button class="btn btn-warning btn-consistent fw-bold d-flex align-items-center gap-1" onclick="getKeywordss()">📥 Get Lists</button>
                 </div></div>
             <div class="col-12"><div class="input-group mb-3">
-                    <span class="input-group-text"><span class="me-1">🎯</span> Target</span> 
-                    <input type="text" id="targets" value='vulnweb.com' class="form-control" placeholder='"vulnweb.com" OR org:vulnweb.com'>
+                    <label class="input-group-text" id="targetLabel"><span class="me-1">🎯</span> Target</label> 
+                    <input type="text" id="targets" aria-labelledby="targetLabel" class="form-control" placeholder="vulnweb.com">
                     <button class="btn btn-success fw-bold input-group-text d-flex align-items-center gap-1" onclick="Generate()">⚙️ Generate Links</button>
                     <button class="btn btn-warning fw-bold input-group-text d-flex align-items-center gap-1" onclick="ResetDorkResults()">♻️ Reset</button>
                 </div></div>
         </div>
         <div class="row">
             <div class="col-6">
-                
                 <div class="form-floating">
-                    <textarea class="form-control" id="keywords1" placeholder="placeholder" style="height: 500px; width: 100%; overflow: scroll; white-space: pre; border:1px solid #ccc; padding:30px 10px 10px 10px;"></textarea>
+                    <textarea class="form-control" id="keywords1" placeholder="placeholder"></textarea>
                     <label for="keywords1">Paste your custom payloads here...</label>
                 </div>
-
             </div>
             <div class="col-6">
-                <div id="results" style="height:500px;overflow:auto; border:1px solid #ccc; padding:10px;"></div>
+                <div id="results"></div>
             </div>
         </div>
     </div>
